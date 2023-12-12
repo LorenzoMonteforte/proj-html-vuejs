@@ -9,3 +9,19 @@
 .marLef0_5rem {
   margin-left: 0.5rem;
 }
+
+.marRig0_5rem {
+  margin-right: 0.5rem;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+.btnYellow {
+  color: white;
+  background-color: rgba(233, 215, 88, 255);
+}
