@@ -25,3 +25,11 @@
   color: white;
   background-color: rgba(233, 215, 88, 255);
 }
+
+.marTop1rem {
+  margin-top: 1rem;
+}
+
+.marTop2rem {
+  margin-top: 2rem;
+}
