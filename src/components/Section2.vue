@@ -58,6 +58,17 @@ export default {
             this.info.description = this.facultiesList[i].description;
             this.info.image = this.facultiesList[i].image;
             this.info.logo2 = this.facultiesList[i].logo
+            let array = document.getElementsByClassName("cardContainer");
+            let array2 = document.getElementsByClassName("logo");
+            let array3 = document.getElementsByClassName("title");
+            for (let index = 0; index < this.facultiesList.length; index++) {
+                array[index].style.backgroundColor = "white";
+                array2[index].style.filter = "";
+                array3[index].style.color = "rgb(217, 104, 102)";
+            }
+            array[i].style.backgroundColor = "rgb(217, 104, 102)";
+            array2[i].style.filter = "brightness(0) invert(1)";
+            array3[i].style.color = "white";
         }
     }
 }
@@ -69,8 +80,8 @@ export default {
         <p class="marTop2rem">A single university with a load of courses, tailored to satisfy any student’s needs.</p>
         <div class="marTop2rem">
             <div class="cardContainer" v-for="(facultie, i) in facultiesList" @click="createProps(i)">
-                <img :src="getImagePath(facultie.logo)">
-                <h4 class="marTop1rem">{{ facultie.title }}</h4>
+                <img class="logo" :src="getImagePath(facultie.logo)">
+                <h4 class="marTop1rem title">{{ facultie.title }}</h4>
             </div>
         </div>
         <SectionImageDescription :info="info" />
