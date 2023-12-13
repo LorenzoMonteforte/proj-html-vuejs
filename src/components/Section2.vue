@@ -39,11 +39,13 @@ export default {
                     description: "Graphic design is the process of visual communication and problem-solving through the use of typography, photography and illustration. The field is considered a subset of visual communication and communication design, but sometimes the term ``graphic design`` is used synonymously."
                 },
             ],
-            objectProps: {
-                logo: "img/Gavel-v2.png",
+            info: {
+                logo: "",
                 title: "Law Faculty",
+                description: "Learning from world-leading academics and practitioners, you’ll not only receive an outstanding grounding in the theory of law, but you will be able to understand how those principles are applied in practice through a range of student-led activities and competitions.",
                 image: "img/Gavel-Illustration-e1556884768193.png",
-                description: "Learning from world-leading academics and practitioners, you’ll not only receive an outstanding grounding in the theory of law, but you will be able to understand how those principles are applied in practice through a range of student-led activities and competitions."
+                button: "Read More",
+                logo2: "img/Gavel-v2.png"
             }
         }
     },
@@ -52,9 +54,10 @@ export default {
             return new URL(`../assets/${img}`, import.meta.url).href;
         },
         createProps: function (i) {
-            this.objectProps.image = this.facultiesList[i].image;
-            this.objectProps.title = this.facultiesList[i].title;
-            this.objectProps.description = this.facultiesList[i].description;
+            this.info.title = this.facultiesList[i].title;
+            this.info.description = this.facultiesList[i].description;
+            this.info.image = this.facultiesList[i].image;
+            this.info.logo2 = this.facultiesList[i].logo
         }
     }
 }
@@ -70,7 +73,7 @@ export default {
                 <h4 class="marTop1rem">{{ facultie.title }}</h4>
             </div>
         </div>
-        <SectionImageDescription :objectProps="objectProps" />
+        <SectionImageDescription :info="info" />
     </section>
 </template>
 
