@@ -30,10 +30,6 @@ export default {
                     qualifica: "Assistan Manager"
                 },
             ],
-            a: 0,
-            b: 1,
-            c: 2,
-            d: 3,
             indici: [0, 1, 2, 3]
         }
     },

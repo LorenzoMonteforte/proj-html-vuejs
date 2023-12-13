@@ -6,6 +6,7 @@ import Section4 from './Section4.vue';
 import Section5 from './Section5.vue';
 import Section6 from './Section6.vue';
 import Section7 from './Section7.vue';
+import Section8 from './Section8.vue';
 export default {
     name: "PageMain",
     components: {
@@ -15,7 +16,8 @@ export default {
         Section4,
         Section5,
         Section6,
-        Section7
+        Section7,
+        Section8
     }
 }
 </script>
@@ -29,6 +31,7 @@ export default {
         <Section5 />
         <Section6 />
         <Section7 />
+        <Section8 />
     </main>
 </template>
 
